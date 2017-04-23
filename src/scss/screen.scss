@@ -97,6 +97,7 @@ body {
       font-size: .8em;
       text-decoration: none;
       line-height: 1.3em;
+      float: left;
       &:hover {
         text-decoration: underline;
       }
@@ -104,10 +105,12 @@ body {
     .commit-sha {
       color: #999;
       font-size: .8em;
+      float: right;
     }
     .commit-date {
       color: #444;
       font-size: .8em;
+      float: right;
     }
     .commit-author-info a {
       color: #444;
@@ -119,8 +122,8 @@ body {
     }
     .commit-avatar {
       margin-top: 10px;
-      height: 50px;
-      width: 50px;
+      height: 30px;
+      width: 30px;
       border-radius: 4px;
       border: 1px solid #dedede;
     }
@@ -133,4 +136,8 @@ body {
 
 .left {
   float: left;
+}
+
+.right {
+  float: right;
 }

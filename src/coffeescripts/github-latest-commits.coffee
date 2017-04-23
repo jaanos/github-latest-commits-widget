@@ -41,11 +41,11 @@ $ ->
                   <img class="commit-avatar" src="#{result.author.avatar_url}">
                 </div>
                 <div class="commit-author-info left">
-                    <a href="https://github.com/#{result.author.login}"><b class="commit-author">#{result.author.login}</b></a>
-                    <br />
-                    <b class="commit-date">#{$.timeago(result.commit.committer.date)}</b><br /><i class="commit-sha">SHA: #{result.sha}</i>
+                    <a class="left" href="https://github.com/#{result.author.login}"><b class="commit-author">#{result.author.login}</b></a>
+                    <i class="commit-sha">#{result.sha}</i>
                     <br />
                     <a class="commit-message" href="https://github.com/#{username}/#{repo}/commit/#{result.sha}" target="_blank">#{result.commit.message}</a>
+                    <b class="commit-date">#{$.timeago(result.commit.committer.date)}</b>
                 </div>
               </li>
           """)
