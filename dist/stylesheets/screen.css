@@ -121,7 +121,7 @@ body {
 #latest-commits-widget {
   border: 1px solid #cacaca;
   width: 500px;
-  height: 250px;
+  height: 200px;
   font: 13px helvetica, arial, freesans, clean, sans-serif;
   background: #dedede;
 }
@@ -163,7 +163,7 @@ body {
 /* line 85, ../../src/scss/screen.scss */
 #latest-commits-widget ul#commit-history {
   overflow-y: auto;
-  height: 214px;
+  height: 164px;
   padding-left: 0;
   margin: 0;
 }
@@ -214,7 +214,7 @@ body {
 }
 /* line 123, ../../src/scss/screen.scss */
 #latest-commits-widget ul#commit-history li .commit-avatar {
-  margin-top: 10px;
+  margin-top: 5px;
   height: 30px;
   width: 30px;
   border-radius: 4px;
@@ -222,7 +222,7 @@ body {
 }
 /* line 130, ../../src/scss/screen.scss */
 #latest-commits-widget ul#commit-history li .commit-author-info {
-  padding: 10px;
+  padding: 0px 10px 0px 10px;
   width: 85%;
 }
 

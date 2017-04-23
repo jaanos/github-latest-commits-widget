@@ -23,7 +23,7 @@ $.extend({
 });
 
 $(function() {
-  var author, branch, callback, container, limit, params, repo, title, url, username;
+  var author, branch, callback, commits, container, limit, params, repo, title, url, username;
   params = $.getUrlVars();
   username = params.username;
   repo = params.repo;
@@ -45,12 +45,15 @@ $(function() {
         }
       })(index, result));
     }
+    ul.append("<li class=\"all-commits\"><a class=\"right\" href=\"" + commits + "\">All commits</a></li>")
     return results;
   };
   title = "Latest Commits to " + username + "/" + repo;
   url = "https://api.github.com/repos/" + username + "/" + repo + "/commits?callback=callback";
+  commits = "https://github.com/" + username + "/" + repo + "/commits/";
   if (params.branch != null) {
     url += "&sha=" + branch;
+    commits += branch;
   }
   if (params.author != null) {
     url += "&author=" + author;

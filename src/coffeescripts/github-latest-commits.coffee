@@ -49,13 +49,16 @@ $ ->
                 </div>
               </li>
           """)
+    ul.append('<a class="right" href="#{commits}">All commits</a>')
 
 
   title = "Latest Commits to #{username}/#{repo}"
   url = "https://api.github.com/repos/#{username}/#{repo}/commits?callback=callback"
+  commits = "https://github.com/#{username}/#{repo}/commits/";
 
   if params.branch?
     url += "&sha=#{branch}"
+    commits += "#{branch}"
   if params.author?
     url += "&author=#{author}"
     title += " by #{author}"
