@@ -49,7 +49,7 @@ $ ->
                 </div>
               </li>
           """)
-    ul.append('<a class="right" href="#{commits}">All commits</a>')
+    ul.append('<a class="right" href="#{commits}" target="_blank">All commits</a>')
 
 
   title = "Latest Commits to #{username}/#{repo}"

@@ -45,7 +45,7 @@ $(function() {
         }
       })(index, result));
     }
-    ul.append("<li class=\"all-commits\"><a class=\"right\" href=\"" + commits + "\">All commits</a></li>")
+    ul.append("<li class=\"all-commits\"><a class=\"right\" href=\"" + commits + "\" target=\"_blank\">All commits</a></li>")
     return results;
   };
   title = "Latest Commits to " + username + "/" + repo;
