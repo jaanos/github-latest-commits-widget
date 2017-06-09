@@ -42,10 +42,12 @@ $(function() {
       results.push((function(index, result) {
         if (result.author != null) {
           return ul.append("<li class=\"clearfix\">\n  <div class=\"left\">\n    <img class=\"commit-avatar\" src=\"" + result.author.avatar_url + "\">\n  </div>\n  <div class=\"commit-author-info left\">\n      <a class=\"left\" href=\"https://github.com/" + result.author.login + "\"><b class=\"commit-author\">" + result.author.login + "</b></a>\n      <i class=\"commit-sha\">" + result.sha + "</i>\n      <br />\n      <a class=\"commit-message\" href=\"https://github.com/" + username + "/" + repo + "/commit/" + result.sha + "\" target=\"_blank\">" + result.commit.message + "</a>\n      <b class=\"commit-date\">" + ($.timeago(result.commit.committer.date)) + "</b>\n  </div>\n</li>");
+        } else {
+          return ul.append("<li class=\"clearfix\">\n  <div class=\"left\">\n    <img class=\"commit-avatar\" src=\"https://camo.githubusercontent.com/03e26a10218810ed1c3d89b271447af945ed298b/68747470733a2f2f302e67726176617461722e636f6d2f6176617461722f34613537663239656430393735356264323830376131656431313237383962363f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d313430\">\n  </div>\n  <div class=\"commit-author-info left\">\n      <div class=\"left\"><b class=\"commit-author\">" + result.commit.author.name + "</b></div>\n      <i class=\"commit-sha\">" + result.sha + "</i>\n      <br />\n      <a class=\"commit-message\" href=\"https://github.com/" + username + "/" + repo + "/commit/" + result.sha + "\" target=\"_blank\">" + result.commit.message + "</a>\n      <b class=\"commit-date\">" + ($.timeago(result.commit.committer.date)) + "</b>\n  </div>\n</li>")
         }
       })(index, result));
     }
-    ul.append("<li class=\"all-commits\"><a class=\"right\" href=\"" + commits + "\" target=\"_blank\">All commits</a></li>")
+    ul.append("<a class=\"right\" href=\"" + commits + "\" target=\"_blank\">All commits</a>")
     return results;
   };
   title = "Latest Commits to " + username + "/" + repo;
