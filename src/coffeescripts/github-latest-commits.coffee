@@ -41,7 +41,7 @@ $ ->
                   <img class="commit-avatar" src="#{result.author.avatar_url}">
                 </div>
                 <div class="commit-author-info left">
-                    <a class="left" href="https://github.com/#{result.author.login}"><b class="commit-author">#{result.author.login}</b></a>
+                    <a class="left" href="https://github.com/#{result.author.login}" target="_blank"><b class="commit-author">#{result.author.login}</b></a>
                     <i class="commit-sha">#{result.sha}</i>
                     <br />
                     <a class="commit-message" href="https://github.com/#{username}/#{repo}/commit/#{result.sha}" target="_blank">#{result.commit.message}</a>
